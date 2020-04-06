@@ -5,6 +5,7 @@
 #define NUMBER_OF_RESOURCES 3
 
 pthread_mutex_t mutex;
+int customerIDs[NUMBER_OF_CUSTOMERS];
 
 /* the available amount of each resource */
 int available[NUMBER_OF_RESOURCES];
@@ -17,3 +18,5 @@ int allocation[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
 
 /* the remaining need of each customer */
 int need[NUMBER_OF_CUSTOMERS][NUMBER_OF_RESOURCES];
+
+void *bank_loop(void *param);
