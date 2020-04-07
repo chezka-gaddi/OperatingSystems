@@ -1,7 +1,9 @@
 /* customers.c */
 
 #include <pthread.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <time.h>
 #include <errno.h>
 #include <string.h>
