@@ -40,17 +40,21 @@ void *customer_loop(void *param)
             request_status = request_resources(id, request);
             times_through_loop++;
         }
-        
         times_through_loop = 0;
 
         if (request_status == -1)
         {
+            for (i=0; i < NUMBER_OF_RESOURCES; i++)
+            {
+                request[i] = (random() % (allocation[id][i]+ 1));
+            }
+            
             release_resources(id, request);
         }
 
         if (calculate_need(id) == 0)
         {
-            release_resources(id, request);
+            release_resources(id, need[id]);
             need_status = 1;
         }
     }
@@ -66,12 +70,6 @@ int request_resources(int customer_num, int request[])
     for (i=0; i < NUMBER_OF_RESOURCES; i++)
     {
         printf(" %d", request[i]); 
-    }
-    printf(" >\n");
-    printf("Available <");
-    for (i=0; i < NUMBER_OF_RESOURCES; i++)
-    {
-        printf(" %d", available[i]); 
     }
     printf(" >\n");
 

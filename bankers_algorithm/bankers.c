@@ -215,7 +215,6 @@ int main(int argc, const char * argv[])
     {
         pthread_join(customers[i], NULL);
     }
-	print_state();
     pthread_mutex_destroy(&mutex);
 }
 
