@@ -13,6 +13,14 @@ pthread_t customers[NUMBER_OF_CUSTOMERS];
 
 /**
  * Initialize all relevant data structures and synchronization objects.
+ *
+ * Initializes the available array to the command line inputs, the
+ * allocation array to 0, the maximum array to a random number dependent on the
+ * available array and the need array to the maximum - allocation.
+ *
+ * The mutex lock is also initialized as well as the customer ID numbers.
+ *
+ * :param argv: command line inputs of the number of available resources.
  **/
 void init(const char * argv[])
 {
@@ -51,6 +59,9 @@ void init(const char * argv[])
     }
 }
 
+/**
+ * Create all of the customer threads.
+ */
 void create_customers()
 {
     int i;
@@ -60,6 +71,16 @@ void create_customers()
     }
 }
 
+/**
+ * safety_test first makes a copy of the current state to run tests on. It then
+ * applies the request by subtracting the request array from the allocation
+ * array and adds the request array to the customer's allocation array. It then
+ * follows the Banker's Algorithm with the safety test.
+ *
+ * :param customer: number of the customer making the request
+ * :param request: resources being requested
+ * :return: 0 if safe state is found, -1 if safe state not found
+ */
 int safety_test(int customer, int request[])
 {
     int i,j;
@@ -89,7 +110,6 @@ int safety_test(int customer, int request[])
 
     //print_test_state();
 
-    
     int count = 0;
     int iterations = 0;
     int status = 1;
@@ -133,6 +153,9 @@ int safety_test(int customer, int request[])
     return -1;
 }
 
+/**
+ * Prints the contents of the test arrays.
+ */
 void print_test_state()
 {
     int i, j;
@@ -166,6 +189,9 @@ void print_test_state()
     
 }
 
+/**
+ * Prints the current state of the system.
+ */
 void print_state()
 {
     int i, j;
@@ -198,6 +224,10 @@ void print_state()
     
 }
 
+/**
+ * Initializes the matrices, prints the initial state of the system and syncs
+ * the customer threads.
+ */
 int main(int argc, const char * argv[])
 {
     int i;

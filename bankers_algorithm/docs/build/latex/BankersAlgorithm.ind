@@ -1,0 +1,17 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter C
+  \item \spxentry{calculate\_need}\spxextra{C function}, \hyperpage{4}
+  \item \spxentry{create\_customers}\spxextra{C function}, \hyperpage{3}
+  \item \spxentry{customer\_loop}\spxextra{C function}, \hyperpage{4}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{print\_state}\spxextra{C function}, \hyperpage{3}
+  \item \spxentry{print\_test\_state}\spxextra{C function}, \hyperpage{3}
+
+\end{sphinxtheindex}
