@@ -3,6 +3,7 @@
 *.o
 *.out
 
+docs/env/*
 docs/build/*
 docs/build/latex
 docs/build/latex/*
