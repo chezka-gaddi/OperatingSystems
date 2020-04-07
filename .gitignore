@@ -1,2 +1,10 @@
+!.gitignore
+
 *.o
 *.out
+
+docs/build/*
+docs/build/latex
+docs/build/latex/*
+!docs/build/latex/BankersAlgorithm.pdf
+
