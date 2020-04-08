@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.15)  7 APR 2020 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.15)  7 APR 2020 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1194,22 +1194,22 @@ less on input line 115.
 Chapter 2.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 121.
+less on input line 176.
 
 [2
 
 ]
 Chapter 3.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 128.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 138.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 183.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 193.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 216.
+less on input line 271.
 
 [3
 
@@ -1232,23 +1232,23 @@ less on input line 17.
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
  (./BankersAlgorithm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
 Package rerunfilecheck Info: File `BankersAlgorithm.out' has not changed.
-(rerunfilecheck)             Checksum: 575865BD8A6AF8125D555F657527CD66;1165.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
+(rerunfilecheck)             Checksum: C76BEB5933014BF6612EBCC58A1EB402;1153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 393.
  ) 
 Here is how much of TeX's memory you used:
- 13657 strings out of 494894
- 189291 string characters out of 6179472
- 273862 words of memory out of 5000000
- 16649 multiletter control sequences out of 15000+600000
- 45021 words of font info for 66 fonts, out of 8000000 for 9000
+ 13685 strings out of 494894
+ 189670 string characters out of 6179472
+ 273968 words of memory out of 5000000
+ 16661 multiletter control sequences out of 15000+600000
+ 52767 words of font info for 71 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 37i,11n,48p,398b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,48p,409b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
@@ -1256,10 +1256,10 @@ rw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on BankersAlgorithm.pdf (8 pages, 82398 bytes).
+Output written on BankersAlgorithm.pdf (8 pages, 87313 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

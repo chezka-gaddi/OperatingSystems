@@ -118,8 +118,63 @@ The \sphinxstyleemphasis{available} array is initialized with these values. Curr
 \section{Banker’s Algorithm}
 \label{\detokenize{implementation:banker-s-algorithm}}
 
-\chapter{Implementation}
-\label{\detokenize{source_code:implementation}}\label{\detokenize{source_code::doc}}
+\subsection{Safety Algorithm}
+\label{\detokenize{implementation:safety-algorithm}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Let \sphinxstylestrong{Work} and \sphinxstylestrong{Finish} be vectors of length \sphinxstyleemphasis{m} and \sphinxstyleemphasis{n}, respectively. Initialize
+\sphinxstylestrong{Work} = \sphinxstylestrong{Available} and \sphinxstylestrong{Finish} {[}\sphinxstyleemphasis{i}{]} = 0 for \sphinxstyleemphasis{i} = 0, 1,.., \sphinxstyleemphasis{n} \sphinxhyphen{} 1.
+
+\item {} 
+Find an index \sphinxstyleemphasis{i} such that both
+\begin{enumerate}
+\sphinxsetlistlabels{\alph}{enumii}{enumiii}{}{.}%
+\item {} 
+\sphinxstylestrong{Finish} {[}\sphinxstyleemphasis{i}{]} == 0
+
+\item {} 
+\sphinxstylestrong{Need}$_{\text{i}}$ \textless{}= \sphinxstylestrong{Work}
+
+\end{enumerate}
+
+\item {} 
+\sphinxstylestrong{Work} = \sphinxstylestrong{Work} + \sphinxstylestrong{Allocation}$_{\text{i}}$
+
+\sphinxstylestrong{Finish} {[}\sphinxstyleemphasis{i}{]} = \sphinxstyleemphasis{true}
+
+Go to step 2
+
+\item {} 
+If \sphinxstylestrong{Finish} {[}\sphinxstyleemphasis{i}{]} == \sphinxstyleemphasis{true} for all \sphinxstyleemphasis{i}, then the system is in a safe state.
+
+\end{enumerate}
+
+
+\subsection{Resource\sphinxhyphen{}Request Algorithm}
+\label{\detokenize{implementation:resource-request-algorithm}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+If \sphinxstylestrong{Request}:sub: \sphinxtitleref{i} \textless{}= \sphinxstylestrong{Need}$_{\text{i}}$, go to step 2. Otherwise, raise an error condition, since the thread has exceeded its maximum claim.
+
+\item {} 
+If \sphinxstylestrong{Request}:sub: \sphinxtitleref{i} \textless{}= \sphinxstylestrong{Available}, go to step 3. Otherwise, \sphinxstyleemphasis{T}$_{\text{i}}$ must wait, since the resources are not available.
+
+\item {} 
+Have the system pretend to have allocated the requested resources to thread \sphinxstyleemphasis{T}$_{\text{i}}$ by modifying the state as follows:
+
+\sphinxstylestrong{Available} = \sphinxstylestrong{Available} \sphinxhyphen{} \sphinxstylestrong{Request}$_{\text{i}}$
+
+\sphinxstylestrong{Allocation}$_{\text{i}}$ = \sphinxstylestrong{Allocation}$_{\text{i}}$ + \sphinxstylestrong{Request}$_{\text{i}}$
+
+\sphinxstylestrong{Need}$_{\text{i}}$ = \sphinxstylestrong{Need}$_{\text{i}}$ + \sphinxstylestrong{Request}$_{\text{i}}$
+
+If the resulting resource\sphinxhyphen{}allocation state is safe, the transaction is completed, and thread \sphinxstyleemphasis{T}$_{\text{i}}$ is allocated its resources. However, if the new state is unsafe, then \sphinxstyleemphasis{T}$_{\text{i}}$ must wait for \sphinxstylestrong{Request}$_{\text{i}}$, and the old resource\sphinxhyphen{}allocation state is restored.
+
+\end{enumerate}
+
+
+\chapter{Source Code}
+\label{\detokenize{source_code:source-code}}\label{\detokenize{source_code::doc}}
 
 \section{bankers.c}
 \label{\detokenize{source_code:bankers-c}}
